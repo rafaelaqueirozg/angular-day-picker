@@ -3,7 +3,7 @@
 Angular Day-Picker is a simple and customizable day picker component built with Angular.
 
 <p align="center">
-  <img heigt="650" width="650" src="https://user-images.githubusercontent.com/42815135/120092072-bd8bd100-c0e6-11eb-9c81-ee06945ec824.gif">
+  <img heigt="650" width="650" src="https://user-images.githubusercontent.com/42815135/120120288-a0044900-c172-11eb-89ab-ac55711af558.gif">
 </p>
 
 # 📌 Live demo
