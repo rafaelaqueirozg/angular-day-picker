@@ -5,4 +5,5 @@
   [maxSelectableDays]="5"
   [disabledDays]="[1, 31]"
   [required]="true"
+  (selectedDaysEmitter)="selectedDays($event)"
 ></day-picker>
