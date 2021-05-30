@@ -1,0 +1,89 @@
+@import './../../assets/styles/variables.scss';
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border: 1px solid $grimy-white;
+  box-shadow: 0px 0px 40px 8px $shadow-color;
+  border-radius: $radius;
+  cursor: pointer;
+  color: $gray;
+  background-color: $white;
+
+  svg {
+    width: 10px;
+    margin-left: 10px;
+    fill: $medium-gray;
+    transition: all 0.5s ease;
+
+    &.expanded {
+      transform: rotate(180deg);
+    }
+  }
+
+
+  div:first-child {
+    display: flex;
+    min-width: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.day-picker {
+  border-radius: $radius;
+  padding: 10px;
+  background: $white;
+  border: 1px solid $grimy-white;
+  box-shadow: 0px 2px 4px $shadow-color;
+  position: absolute;
+  margin-top: 5px;
+  transition: all .3s linear;
+
+  .information {
+    padding: 0 10px 10px 10px;
+
+    small {
+      color: $gray;
+    }
+  }
+
+  .day-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    button {
+      outline: none;
+      border: 0;
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+      background-color: transparent;
+
+      &:hover:not(:disabled) {
+        cursor: pointer;
+        background: $dark-blue;
+        color: $light-blue;
+      }
+
+      &:active,
+      &.is-selected {
+        background: $light-blue;
+        color: $mid-blue;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+small {
+  font-size: $font-size-10;
+}
