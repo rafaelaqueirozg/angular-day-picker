@@ -17,11 +17,11 @@ export interface SelectedDaysEmitter {
 }
 
 @Component({
-  selector: "day-picker",
-  templateUrl: "./day-picker.component.html",
-  styleUrls: ["./day-picker.component.scss"],
+  selector: 'ng-day-picker',
+  templateUrl: './ng-day-picker.component.html',
+  styleUrls: ['./ng-day-picker.component.css']
 })
-export class DayPickerComponent implements OnInit {
+export class NgDayPickerComponent implements OnInit {
   @Input()
   range!: Range;
 
@@ -60,15 +60,14 @@ export class DayPickerComponent implements OnInit {
     const lastDay = orderedDays.length - 1;
 
     for (let index = 0; index < orderedDays.length; index++) {
-      days += ` ${orderedDays[index]}${
-        index === penultimateDay ? " and " : index === lastDay ? "" : ", "
-      }`;
+      days += ` ${orderedDays[index]}${index === penultimateDay ? " and " : index === lastDay ? "" : ", "
+        }`;
     }
 
     return `Every day ${days}`;
   }
 
-  constructor() {}
+  constructor() { }
 
   toggleDayPicker(): void {
     this.isShowingDayPicker = !this.isShowingDayPicker;

@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { DayPickerComponent } from "./day-picker.component";
+import { NgDayPickerComponent } from "./ng-day-picker.component";
 
 const range = { initialDay: 1, finalDay: 31 };
 const maxSelectableDays = 3;
 const disabledDays = [1, 31];
 
-describe("DayPickerComponent", () => {
-  let component: DayPickerComponent;
-  let fixture: ComponentFixture<DayPickerComponent>;
+describe("NgDayPickerComponent", () => {
+  let component: NgDayPickerComponent;
+  let fixture: ComponentFixture<NgDayPickerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [DayPickerComponent],
+      declarations: [NgDayPickerComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DayPickerComponent);
+    fixture = TestBed.createComponent(NgDayPickerComponent);
     component = fixture.componentInstance;
     component.range = range;
     component.maxSelectableDays = maxSelectableDays;
