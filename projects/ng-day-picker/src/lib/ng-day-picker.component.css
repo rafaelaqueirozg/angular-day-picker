@@ -1,0 +1,89 @@
+* {
+ --gray: #878787;
+ --medium-gray: #b1b1b1;
+ --gray_69: #696969;
+ --shadow-color: #2828280d;
+ --white: #ffffff;
+ --grimy-white: #f0f0f0;
+ --red: #d2373c;
+ --light-blue: #55d7ff;
+ --mid-blue: #1295bd;
+ --dark-blue: #003688;
+
+ --radius: 4px;
+ --font-size-10: 10px;
+}
+
+.input {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 8px 16px;
+ border: 1px solid var(--grimy-white);
+ box-shadow: 0px 0px 40px 8px var(--shadow-color);
+ border-radius: var(--radius);
+ cursor: pointer;
+ color: var(--gray);
+ background-color: var(--white);
+}
+.input svg {
+ width: 10px;
+ margin-left: 10px;
+ fill: var(--medium-gray);
+ transition: all 0.5s ease;
+}
+.input svg.expanded {
+ transform: rotate(180deg);
+}
+.input div:first-child {
+ display: flex;
+ min-width: 200px;
+ flex-direction: column;
+ align-items: flex-start;
+}
+.input h3 {
+ margin: 0;
+ font-size: 14px;
+ font-weight: 500;
+}
+.day-picker {
+ border-radius: var(--radius);
+ padding: 10px;
+ background: var(--white);
+ border: 1px solid var(--grimy-white);
+ box-shadow: 0px 2px 4px var(--shadow-color);
+ position: absolute;
+ margin-top: 5px;
+ transition: all 0.3s linear;
+}
+.day-picker .information {
+padding: 0 10px 10px 10px;
+}
+.day-picker .information small {
+ color: var(--gray);
+}
+.day-picker .day-grid {
+ display: grid;
+ grid-template-columns: repeat(7, 1fr);
+}
+.day-picker .day-grid button {
+ outline: none;
+ border: 0;
+ width: 33px;
+ height: 33px;
+ border-radius: 50%;
+ background-color: transparent;
+}
+.day-picker .day-grid button:hover:not(:disabled) {
+ cursor: pointer;
+ background: var(--dark-blue);
+ color: var(--light-blue);
+}
+.day-picker .day-grid button:active, .day-picker .day-grid button.is-selected {
+ background: var(--light-blue);
+ color: var(--mid-blue);
+ font-weight: 600;
+}
+small {
+ font-size: var(--font-size-10);
+}

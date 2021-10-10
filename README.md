@@ -22,34 +22,35 @@ See it in action, check out the [demo page](https://angular-day-picker.stackblit
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Karma](https://karma-runner.github.io/latest/index.html)
 
-# 🤓 How to run
-
-To see an example of the code running, follow these steps:
-
-```bash
-# Clone this repository
-git clone https://github.com/rafaela-queiroz/angular-day-picker.git
-
-# Install the dependencies
-npm install
-
-# Run the project (The project will run on port 1234)
-npm start
-
-# Run unit tests
-npm test
-
-```
 
 Or edit on [Stackblitz](https://stackblitz.com/edit/angular-day-picker?file=src/app/day-picker/day-picker.component.ts).
 
 # 💻 Usage
 
+Install this lib
+
+```bash
+npm i --save ng-day-picker
+```
+
+In your module:
+
+```typescript
+import { NgDayPickerModule } from 'ng-day-picker'
+
+@NgModule({
+  imports: [
+    NgDayPickerModule
+  ]
+})
+```
+
 In your component:
 
 ```typescript
 import { Component } from "@angular/core";
-import { SelectedDaysEmitter } from "./day-picker/day-picker.component";
+
+import { SelectedDaysEmitter } from "ng-day-picker";
 
 @Component({
   selector: "app",
@@ -70,14 +71,14 @@ export class AppComponent {
 In your HTML:
 
 ```html
-<day-picker
-  [label]="Your label here"
+<ng-day-picker
+  [label]="'Your label here'"
   [range]="{ initialDay: 1, finalDay: 31 }"
   [required]="true"
   [disabledDays]="[1, 31]"
   [maxSelectableDays]="5"
   (selectedDaysEmitter)="selectedDays($event)"
-></day-picker>
+></ng-day-picker>
 ```
 
 # 🤝 Contributions
